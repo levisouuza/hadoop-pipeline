@@ -15,3 +15,9 @@ Por fim, o [HIVE](https://hive.apache.org/) é o data warehouse do framework. Da
 
 Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o PostgreSql, HDFS, Sqoop e Hive. 
 
+### Data Pipeline 
+
+O fluxo apresentado abaixo consiste em extrair dados do Banco de dados Postgresql via Sqoop, inserindo-os no HDFS e criando uma tabela no hive para serem analisados.
+
+[](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
+
