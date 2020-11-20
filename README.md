@@ -19,5 +19,5 @@ Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o Pos
 
 O fluxo apresentado abaixo consiste em extrair dados do Banco de dados Postgresql via Sqoop, inserindo-os no HDFS e criando uma tabela no hive para serem analisados.
 
-!(https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
+![Data Pipeline](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
 
