@@ -13,11 +13,14 @@ O [sqoop](https://sqoop.apache.org/) é a ferramenta de extração e carga de da
 
 Por fim, o [HIVE](https://hive.apache.org/) é o data warehouse do framework. Data Warehouse é o armazém de dados utilizados para análise de dados das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando HiveQL, uma linguagem similar ao famoso SQL para os bancos de dados relacionais. O Hive nos permite executar grandes queries utilizando o método mapreduce, o que traz um aumento de produtividade para os analistas de dados. 
 
-Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o PostgreSql, HDFS, Sqoop e Hive. 
+Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o PostgreSql, HDFS, Sqoop e Hive. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente pronto para desenvolvimento do ecossitema hadoop.
 
 ### Data Pipeline 
 
 O fluxo apresentado abaixo consiste em extrair dados do Banco de dados Postgresql via Sqoop, inserindo-os no HDFS e criando uma tabela no hive para serem analisados.
 
 ![Data Pipeline](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
+
+#### 1º Passo - PostgreSQl 
+
 
