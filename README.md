@@ -69,6 +69,6 @@ Logo abaixo segue as etapas da crição de banco de dados e tabela.
 
 ![HiveQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/HiveQL.png)
 
-**Algumas observações: **
+**Algumas observações:**
 
 * jfyffghg
