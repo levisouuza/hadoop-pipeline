@@ -2,7 +2,7 @@
 
 A criação do framework [Hadoop](https://hadoop.apache.org/) mudou totalmente o paradigma dos modelos de armazenagem e processamento de dados. Com o artifício da computação paralela e distribuída, podemos processar grandes datasets em um tempo muito inferior em relação a outros *players* do mercado. 
 
-O framework Hadoop é composto por várias ferramentas, nesse projeto, iremos utilizar o **HDFS**, **Map Reduce**, **Sqoop** e **Hive**.
+O framework Hadoop é composto por várias ferramentas em seu ecossistema. Nesse projeto, iremos utilizar o **HDFS**, **Map Reduce**, **Sqoop** e **Hive**.
  
 O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm), *Hadoop Distributed File System*, é o sistema de arquivos distribuidos do Ecossistema. Ele nos permite armazenar dados utilizando clusters (Conjunto de vários computadores). Assim como as demais ferramentas do ecossistema, possui o aspecto de ser tolerante a falha, com a replicação de dados em blocos nos diversos nós do cluster, garantindo a sua disponibilidade de acesso.
 
