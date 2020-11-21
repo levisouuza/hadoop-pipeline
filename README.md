@@ -71,4 +71,6 @@ Logo abaixo segue as etapas da crição de banco de dados e tabela.
 
 **Algumas observações:**
 
-* jfyffghg
+* O Hive possui o mecanismo de particionamento de arquivos que pertencem as suas tabelas. Esse método permite que os dados sejam divididos entre arquivos baseado em um ou mais atributos da tabela. Logo, quando uma query é executada com determinado filtro(*where*), a engine irá procurar em arquivos específicos e não, em um único arquivo gigantesco arquivo. Um ponto importante é identificar qual o melhor atributo para realizar esse particionamento, visto que, atributos com alta cardinalidade irão gerar um número elevado de arquivos no diretório.
+
+* No exemplo, foi criada uma tabela externa, isso significa que caso a tabela seja *"dropada"*, os dados ainda estaram no HDFS para serem utilizados, diferente das tabelas criadas e populadas diretamente no Hive, onde tudo seria deletado.
