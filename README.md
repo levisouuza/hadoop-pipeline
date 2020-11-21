@@ -4,19 +4,19 @@ A criação do framework [Hadoop](https://hadoop.apache.org/) mudou totalmente o
 
 O framework Hadoop é composto por várias ferramentas que nos permitem armazenar, processar e analisar elevados conjuntos de dados. Podemos citar como as mais importantes o **HDFS**, **Map Reduce**, **Sqoop** e **Hive**.
 
-O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm) é a principal ferramenta de armazenamento de dados do Hadoop. O *Hadoop Distributed File System* é o sistema de arquivos distribuidos do Ecossistema Hadoop. O HDFS nos permite armazenar de dados de forma distribuída utilizando clusters (Conjunto de vários computadores) com diversos nós (uma única máquina). O HDFS, assim como as demais ferramentas do ecossistema, tem a característica de ser tolerante a falha, pois replica os dados armazenando-os em blocos em diversos nodes do cluster, garantindo a sua disponibilidade de acesso.
+O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm),*Hadoop Distributed File System*, é o sistema de arquivos distribuidos do Ecossistema. Ele permite armazenar de dados utilizando clusters (Conjunto de vários computadores). Assim como as demais ferramentas do ecossistema, possui o aspecto de ser tolerante a falha, com a replicação de dados em blocos nos diversos nós do cluster, garantindo a sua disponibilidade de acesso.
 
 [Map Reduce](https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose) é o modelo de processamento de dados do Hadoop. O Map reduce consiste em  mapear (*Map*), no input dos dados, àqueles que são idênticos, ordená-los, com o intuito de organizar e separá-los, e reduzi-los (*Reduce*), para um conjunto menor.
 
 O [Sqoop](https://sqoop.apache.org/) é a ferramenta de extração e carga de dados para bancos relacionais do ecossistema. Com ela, é possível importar dados dos SGBD's para o HDFS ou vice-versa. O Sqoop apresenta a facilidade em sua execução, pois com poucas linhas de código é possível realizar o processo de extração e carga. Além disso, em execução, é realizado o processamento de MapReduce, garantindo uma maior performance.
 
-Por fim, o [HIVE](https://hive.apache.org/) é o data warehouse do framework. Um Data Warehouse é o armazém de dados utilizados para análise das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando HiveQL, uma linguagem similar SQL. O Hive nos permite executar queries utilizando o método MapReduce, o que traz um aumento de produtividade para os analistas de dados.
+O [Apache Hive](https://hive.apache.org/) é o Data Warehouse do framework. Um Data Warehouse é o armazém de dados utilizados para análise das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando queries na linguagem HiveQL, uma linguagem similar SQL e MapReduce.
 
-Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o PostgreSql, HDFS, Sqoop e Hive. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente pronto para desenvolvimento do Ecossistema Hadoop.
+Baseado nessas ferramentas, criei um pequeno pipeline de dados. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente pronto para desenvolvimento do Ecossistema Hadoop.
 
 ## Data Pipeline 
 
-O fluxo apresentado abaixo consiste em extrair dados do Banco de dados Postgresql via Sqoop, inserindo-os no HDFS e criando uma tabela no hive para serem analisados.
+O fluxo apresentado abaixo consiste em extrair dados do Postgresql via Sqoop, inserindo-os no HDFS e criando uma tabela no hive para serem analisados.
 
 ![Data Pipeline](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
 
