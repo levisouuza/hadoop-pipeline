@@ -15,13 +15,15 @@ Por fim, o [HIVE](https://hive.apache.org/) é o data warehouse do framework. Da
 
 Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o PostgreSql, HDFS, Sqoop e Hive. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente pronto para desenvolvimento do ecossitema hadoop.
 
-### Data Pipeline 
+## Data Pipeline 
 
 O fluxo apresentado abaixo consiste em extrair dados do Banco de dados Postgresql via Sqoop, inserindo-os no HDFS e criando uma tabela no hive para serem analisados.
 
 ![Data Pipeline](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
 
-#### 1º Passo - PostgreSql
+### 1º Passo - PostgreSql
+
+A primeira etapa do projeto foi criar uma tabela e populá-la em um banco de dados relacional. O escolhido foi o postgresql. Todo processo de criação está exibido na imagem abaixo. 
 
 ![PostgreSQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/Postgresql.png)
 
