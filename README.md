@@ -54,3 +54,16 @@ Iremos copiar os dados das tabelas do postgres para o HDFS. Para isso, iremos ex
 No processamento de carga para o HDFS, o sqoop utiliza o método de *MapReduce*, dito anteriormente. Em sua execução, ocorre o particionamente de registros da tabela em vários arquivos(o próprio sqoop define a quantidade de arquivos e registros contidos neles) baseado em sua chave primária, acarretando em um aumento de performance de carga. 
 
 Os arquivos são armazenados no diretório */user/cloudera/retail/*, visto que estamos utilizando a VM cloudera quickstart.
+
+Agora que os dados estão em nosso **Data Lake**, o HDFS, será necessário levá-los para o nosso **Data Warehouse**. Um DW é um armazém de dados/banco de dados onde será inseridos os dados para serem analisados pelos analistas e cientistas de dado, analista de Business Intelligence ou quem desejar usá-los para gerar *insights* para o negócio.
+
+Existem algumas metodologias modelagem de dados de um DW, conforme podemos visualizar nesse [link](https://www.astera.com/pt/type/blog/data-warehouse-concepts/).
+
+Nesse projeto, o intuito é mostrar como funciona, de maneira bem prática, algumas ferramentas do ecossistema Hadoop. Portanto, iremos apenas realizar a carga direta na tabela no Hive, não criando as famosas **tabelas fato e dimensão**. Entretanto, nesse [projeto](https://github.com/levisouuza/Brazilian-E-commerce-Project) podemos visualizar esse tipo de modelagem e todo o processo de execução.
+
+### 3º Passo - Hive
+
+O [Apache Hive](https://hive.apache.org/) é a ferramenta do ecossistema Hadoop de Data Warehouse. Com a linguagem HiveQL, é possível realizar analisar uma gigantesca massa de dados utilizando uma linguagem muito similar ao SQL (Conhecido pela maioria dos analistas de dados) atrelado ao método de processamento MapReduce. 
+
+
+
