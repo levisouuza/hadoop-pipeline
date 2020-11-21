@@ -50,7 +50,7 @@ Iremos copiar os dados das tabelas do postgres para o HDFS. Para isso, iremos ex
 
 ![Sqoopimport](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopImport.png)
 
-No processamento de carga para o HDFS, o sqoop utiliza o método de *MapReduce*, dito anteriormente. Em sua execução, ocorre o particionamento de registros da tabela em vários arquivos(o próprio Sqoop define a quantidade de arquivos e registros contidos neles) baseado em sua chave primária, acarretando em um aumento de performance de carga. 
+No processamento de carga para o HDFS, o sqoop utiliza o método de *MapReduce*, dito anteriormente. Em sua execução, ocorre o particionamento de registros da tabela em vários arquivos (O próprio Sqoop define a quantidade de arquivos e registros contidos em cada partição) baseado na chave primária da tabela, acarretando em uma maior performance.
 
 Os arquivos são armazenados no diretório */user/cloudera/lake/retail/*.
 
