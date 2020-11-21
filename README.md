@@ -62,12 +62,12 @@ Nesse projeto, o intuito é mostrar como funciona, de maneira bem prática, algu
 
 ### 3º Passo - Hive
 
-Podemos visualizar as etapas de criação do banco de dados e tabela no hive na imagem abaixo:
+Podemos visualizar as etapas de criação do banco de dados e tabela no Hive na imagem abaixo:
 
 ![HiveQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/HiveQL.png)
 
 **Pontos importantes:**
 
-* O Hive possui o mecanismo de particionamento de arquivos de suas tabelas. Esse método permite que os dados sejam divididos entre arquivos baseados em um ou mais atributos. Logo, quando uma query é executada com determinado filtro(*where*), a engine irá procurar em arquivos específicos e não, em um único arquivo gigantesco arquivo. É necessário escolher bem o atributo da partição, visto que, atributos com alta cardinalidade irão gerar um número elevado de arquivos no diretório.
+* O Hive possui o mecanismo de particionamento de arquivos de suas tabelas. Esse método permite que os dados sejam divididos entre arquivos baseados em um ou mais atributos. Logo, quando uma query é executada com determinado filtro (*where*), a engine irá procurar em arquivos específicos. É necessário escolher bem o atributo da partição, visto que, atributos com alta cardinalidade irão gerar um número elevado de arquivos no diretório.
 
 * No exemplo, foi criada uma tabela externa, isso significa que caso a tabela seja *"dropada"*, os dados ainda estaram no HDFS para serem utilizados, diferente das tabelas criadas e populadas diretamente no Hive, onde tudo seria deletado.
