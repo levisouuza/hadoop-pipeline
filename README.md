@@ -1,19 +1,18 @@
 # hadoop-pipeline
 
-A criação do framework [Hadoop](https://hadoop.apache.org/) mudou totalmente o paradigma dos modelos de armazenagem e processamento de dados. Com o artifício de utilizar computação paralela e distribuída, podemos processar uma gigantesca quantidade de dados em um tempo muito inferior em relação a outros players do mercado, poís é possível utilizar recursos de diversas máquinas (nodes) simultaneamente. O surgimento do Hadoop foi essencial para a humanidade. Com o surgimento de novas tecnologias e melhorias das já existentes, houve um pico de na quantidade de dados geradas pelos individuos, acarretando na pergunta: Como podemos guardar esse dados ? Como podemos analisá-los ? 
+A criação do framework [Hadoop](https://hadoop.apache.org/) mudou totalmente o paradigma dos modelos de armazenagem e processamento de dados. Com o artifício da computação paralela e distribuída, podemos processar uma gigantesca quantidade de dados em um tempo muito inferior em relação a outros players do mercado, pois, é possível utilizar recursos de diversas máquinas (nodes) simultaneamente. O surgimento do Hadoop foi essencial para a humanidade. Com o surgimento de novas tecnologias e melhorias das já existentes, houve um pico  na quantidade de dados geradas pelos individuos, acarretando em perguntas do tipo: Como podemos guardar esse dados ? Como podemos analisá-los ? 
 
-O framework Hadoop é composto por várias ferramentas que nos permitem armazenar, processar e analisar um conjunto elevado de dados. Podemos citar como as mais importantes o **HDFS**, **Map Reduce**, **Sqoop** e **Hive**.
+O framework Hadoop é composto por várias ferramentas que nos permitem armazenar, processar e analisar grandes datasets. Podemos citar como as mais importantes o **HDFS**, **Map Reduce**, **Sqoop** e **Hive**.
 
-O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm) é a principal ferramenta de armazenamento de dados do Hadoop. O *Hadoop Distributed File System* é o sistema de arquivos distribuidos do Ecossistema Hadoop. O HDFS nos permite armazenar uma imensa quantidade de dados de forma distribuída utilizando cluster (Conjunto de vários computados) com diversos nós (uma única máquina). Na concepção do hadoop, um modelo de computação distribuída e paralela, é possível utilizar várias máquinas para diversos fins. Portanto, para que não haja um custo elevado de projeto para implantação do sistema, o Hadoop nos trouxe o conceito de Commodity Hadware, máquinas de qualidade inferior em relação a uma utilizada, por exemplo, em um banco de dados relacional, para compor o cluster. Logo, devido a utilização de hadwares mais baratos, surge a possibilidade de falhas. O HDFS, assim como as demais ferramentas do ecossistema, tem a característica de ser tolerante a falha, pois utiliza o modelo de replicação em seus dados, isto é, um arquivo ou uma parte do mesmo, pode ser armazenado em diversos nodes, garantindo a sua disponibilidade de acesso.
+O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm) é a principal ferramenta de armazenamento de dados do Hadoop. O *Hadoop Distributed File System* é o sistema de arquivos distribuidos do Ecossistema Hadoop. O HDFS nos permite armazenar uma imensa quantidade de dados de forma distribuída utilizando clusters (Conjunto de vários computadores) com diversos nós (uma única máquina). Para que não haja um *budget* elevado implantação, o Hadoop nos trouxe o conceito de Commodity Hadware, máquinas de qualidade inferior em relação a uma utilizada, por exemplo, em um banco de dados relacional, para compor o cluster. O HDFS, assim como as demais ferramentas do ecossistema, tem a característica de ser tolerante a falha, pois realiza replicas dos dados armazenados em blocos em diversos nodes, garantindo a sua disponibilidade de acesso.
 
+[Map Reduce](https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose) é o modelo de processamento de dados apresentado pelo Hadoop. Basicamente, este método consiste em  mapear, no input dos dados, àqueles que são idênticos, ordená-los, com o intuito de organizar e separá-los, para a etapa seguinte, o Reduce, que por sua vez, reduz aqueles dados de entrada para um conjunto menor.
 
-[Map Reduce](https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose) é o modelo de processo de dados apresentado pelo Hadoop. Basicamente, este método consiste em  mapear, no input dos dados, àqueles que são idênticos, ordená-los, com o intuito de organizar e separá-los, para a etapa seguinte, o Reduce, que por sua vez, reduz aqueles dados de entrada para um conjunto menor, onde, é possível ser analisado. Para a execução de aplicação de MapReduce é necessário conhecer a linguagem de programação java. 
+O [Sqoop](https://sqoop.apache.org/) é a ferramenta de extração e carga de dados para bancos relacionais do ecossistema. Com ela, é possível importar dados dos SGBD's para o HDFS ou do HDFS para os bancos relacionais. O Sqoop apresenta a facilidade em sua execução, pois com poucas linhas de código é possível realizar o processo de extração e carga. Além disso, em execução, é realizado o processamento de MapReduce, garantindo uma maior performance.
 
-O [sqoop](https://sqoop.apache.org/) é a ferramenta de extração e carga de dados para bancos relacionais do ecossistema. Com ela, é possível importar dados dos SGBD's para o HDFS ou do HDFS para os bancos relacionais. O Sqoop apresenta a facilidade em sua execução, pois com poucas linhas de código é possível realizar esse processo de extrair e carregar. Além disso, em execução é realizado o processamento de MapReduce, garantindo uma maior velocidade de processamento.
+Por fim, o [HIVE](https://hive.apache.org/) é o data warehouse do framework. Um Data Warehouse é o armazém de dados utilizados para análise de dados das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando HiveQL, uma linguagem similar SQL. O Hive nos permite executar grandes queries utilizando o método MapReduce, o que traz um aumento de produtividade para os analistas de dados e geração de *insights* para o negócio.
 
-Por fim, o [HIVE](https://hive.apache.org/) é o data warehouse do framework. Data Warehouse é o armazém de dados utilizados para análise de dados das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando HiveQL, uma linguagem similar ao famoso SQL para os bancos de dados relacionais. O Hive nos permite executar grandes queries utilizando o método mapreduce, o que traz um aumento de produtividade para os analistas de dados. 
-
-Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o PostgreSql, HDFS, Sqoop e Hive. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente pronto para desenvolvimento do ecossitema hadoop.
+Baseado nessas ferramentas, criei um pequeno pipeline de dados, utilizando o PostgreSql, HDFS, Sqoop e Hive. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente pronto para desenvolvimento do Ecossitema Hadoop.
 
 ## Data Pipeline 
 
@@ -23,15 +22,15 @@ O fluxo apresentado abaixo consiste em extrair dados do Banco de dados Postgresq
 
 ### 1º Passo - PostgreSql
 
-A primeira etapa do projeto foi criar uma tabela e populá-la em um banco de dados relacional. O escolhido foi o postgresql. Todo processo de criação está exibido na imagem abaixo. 
+A primeira etapa do projeto foi criar uma tabela e populá-la no PostgreSql. Todo processo de criação está exibido na imagem abaixo. 
 
 ![PostgreSQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/Postgresql.png)
 
 ### 2º Passo - Sqoop
 
-Tabela criada no banco de dados relacional. Agora, precisamos carregar os dados para o HDFS, o nosso [Data Lake](https://www.redhat.com/pt-br/topics/data-storage/what-is-a-data-lake). Logo, utilizaremos o Sqoop.
+Agora, precisamos carregar os dados para o HDFS, o nosso [Data Lake](https://www.redhat.com/pt-br/topics/data-storage/what-is-a-data-lake).
 
-Podemos verificar as tabelas existentes no Postgres via sqoop, utilizando a linha de comando abaixo. 
+Antes, iremos verificar as tabelas existentes no PostgreSql via sqoop, utilizando a linha de comando abaixo. 
 
 ![SqoopListTables](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopListTables.png)
 
@@ -51,26 +50,24 @@ Iremos copiar os dados das tabelas do postgres para o HDFS. Para isso, iremos ex
 
 ![Sqoopimport](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopImport.png)
 
-No processamento de carga para o HDFS, o sqoop utiliza o método de *MapReduce*, dito anteriormente. Em sua execução, ocorre o particionamente de registros da tabela em vários arquivos(o próprio sqoop define a quantidade de arquivos e registros contidos neles) baseado em sua chave primária, acarretando em um aumento de performance de carga. 
+No processamento de carga para o HDFS, o sqoop utiliza o método de *MapReduce*, dito anteriormente. Em sua execução, ocorre o particionamento de registros da tabela em vários arquivos(o próprio Sqoop define a quantidade de arquivos e registros contidos neles) baseado em sua chave primária, acarretando em um aumento de performance de carga. 
 
-Os arquivos são armazenados no diretório */user/cloudera/lake/retail/*, visto que estamos utilizando a VM cloudera quickstart.
+Os arquivos são armazenados no diretório */user/cloudera/lake/retail/*.
 
-Agora que os dados estão em nosso **Data Lake**, o HDFS, será necessário levá-los para o nosso **Data Warehouse**. Um DW é um armazém de dados/banco de dados onde será inseridos os dados para serem analisados pelos analistas e cientistas de dado, analista de Business Intelligence ou quem desejar usá-los para gerar *insights* para o negócio.
+Agora que os dados estão em nosso **Data Lake**, o HDFS, será necessário levá-los para o nosso **Data Warehouse**. 
 
 Existem algumas metodologias modelagem de dados de um DW, conforme podemos visualizar nesse [link](https://www.astera.com/pt/type/blog/data-warehouse-concepts/).
 
-Nesse projeto, o intuito é mostrar como funciona, de maneira bem prática, algumas ferramentas do ecossistema Hadoop. Portanto, iremos apenas realizar a carga direta na tabela no Hive, não criando as famosas **tabelas fato e dimensão**. Entretanto, nesse [projeto](https://github.com/levisouuza/Brazilian-E-commerce-Project) podemos visualizar esse tipo de modelagem e todo o processo de execução.
+Nesse projeto, o intuito é mostrar como funciona, de maneira bem prática, algumas ferramentas do ecossistema Hadoop. Portanto, iremos apenas realizar a carga direta na tabela no Hive, não criando as **tabelas fato e dimensão**. Porém, nesse [projeto](https://github.com/levisouuza/Brazilian-E-commerce-Project) podemos visualizar esse tipo de modelagem e todo o processo de execução.
 
 ### 3º Passo - Hive
 
-O [Apache Hive](https://hive.apache.org/) é a ferramenta do ecossistema Hadoop de Data Warehouse. Com a linguagem HiveQL, é possível realizar analisar uma gigantesca massa de dados utilizando uma linguagem muito similar ao SQL (Conhecido pela maioria dos analistas de dados) atrelado ao método de processamento MapReduce. 
-
-Logo abaixo segue as etapas da crição de banco de dados e tabela. 
+Podemos visualizar as etapas de criação do banco de dados e tabela no hive na imagem abaixo:
 
 ![HiveQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/HiveQL.png)
 
 **Algumas observações:**
 
-* O Hive possui o mecanismo de particionamento de arquivos que pertencem as suas tabelas. Esse método permite que os dados sejam divididos entre arquivos baseado em um ou mais atributos da tabela. Logo, quando uma query é executada com determinado filtro(*where*), a engine irá procurar em arquivos específicos e não, em um único arquivo gigantesco arquivo. Um ponto importante é identificar qual o melhor atributo para realizar esse particionamento, visto que, atributos com alta cardinalidade irão gerar um número elevado de arquivos no diretório.
+* O Hive possui o mecanismo de particionamento de arquivos de suas tabelas. Esse método permite que os dados sejam divididos entre arquivos baseados em um ou mais atributos. Logo, quando uma query é executada com determinado filtro(*where*), a engine irá procurar em arquivos específicos e não, em um único arquivo gigantesco arquivo. É necessário escolher bem o atributo da partição, visto que, atributos com alta cardinalidade irão gerar um número elevado de arquivos no diretório.
 
 * No exemplo, foi criada uma tabela externa, isso significa que caso a tabela seja *"dropada"*, os dados ainda estaram no HDFS para serem utilizados, diferente das tabelas criadas e populadas diretamente no Hive, onde tudo seria deletado.
