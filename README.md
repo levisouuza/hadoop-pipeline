@@ -3,8 +3,8 @@
 A criação do framework [Hadoop](https://hadoop.apache.org/) mudou totalmente o paradigma dos modelos de armazenagem e processamento de dados. Com o artifício da computação paralela e distribuída, podemos processar grandes datasets em um tempo muito inferior em relação a outros *players* do mercado. 
 
 O framework Hadoop é composto por várias ferramentas, nesse projeto, iremos utilizar o **HDFS**, **Map Reduce**, **Sqoop** e **Hive**.
-
-O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm),*Hadoop Distributed File System*, é o sistema de arquivos distribuidos do Ecossistema. Ele permite armazenar de dados utilizando clusters (Conjunto de vários computadores). Assim como as demais ferramentas do ecossistema, possui o aspecto de ser tolerante a falha, com a replicação de dados em blocos nos diversos nós do cluster, garantindo a sua disponibilidade de acesso.
+ 
+O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm), *Hadoop Distributed File System*, é o sistema de arquivos distribuidos do Ecossistema. Ele permite armazenar de dados utilizando clusters (Conjunto de vários computadores). Assim como as demais ferramentas do ecossistema, possui o aspecto de ser tolerante a falha, com a replicação de dados em blocos nos diversos nós do cluster, garantindo a sua disponibilidade de acesso.
 
 [Map Reduce](https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose) é o modelo de processamento de dados do Hadoop. O Map reduce consiste em  mapear (*Map*), no input dos dados, àqueles que são idênticos, ordená-los, com o intuito de organizar e separá-los, e reduzi-los (*Reduce*), para um conjunto menor.
 
