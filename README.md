@@ -21,6 +21,8 @@ O fluxo apresentado abaixo consiste em extrair dados do Banco de dados Postgresq
 
 ![Data Pipeline](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
 
-#### 1º Passo - PostgreSQl 
+#### 1º Passo - PostgreSql
+
+![PostgreSQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/Postgresql.png)
 
 
