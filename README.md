@@ -6,7 +6,7 @@ O framework Hadoop é composto por várias ferramentas em seu ecossistema. Nesse
  
 O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm), *Hadoop Distributed File System*, é o sistema de arquivos distribuidos do Ecossistema. Ele nos permite armazenar dados utilizando clusters (Conjunto de vários computadores). Assim como as demais ferramentas do ecossistema, possui o aspecto de ser tolerante a falha, com a replicação de dados em blocos nos diversos nós do cluster, garantindo a sua disponibilidade de acesso.
 
-[Map Reduce](https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose) é o modelo de processamento de dados do Hadoop. O Map reduce consiste em  mapear (*Map*), no input dos dados, àqueles que são idênticos, ordená-los, com o intuito de organizar e separá-los, e reduzi-los (*Reduce*), para um conjunto menor, para serem analisados.
+[Map Reduce](https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html#Purpose) é o modelo de processamento de dados do Hadoop. O Map reduce consiste em  mapear (*Map*), no input dos dados, àqueles que são idênticos, ordená-los, com o intuito de organizar e separá-los, e reduzi-los (*Reduce*), para um conjunto menor, mais apto à analises.
 
 O [Sqoop](https://sqoop.apache.org/) é a ferramenta de extração e carga de dados para bancos relacionais do ecossistema. O Sqoop exporta dados dos SGBD's para o HDFS ou vice-versa. Com poucas linhas de código é possível realizar o processo de extração e carga. Além disso, em execução, é realizado o processamento de MapReduce, garantindo uma maior performance.
 
