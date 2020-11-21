@@ -1,6 +1,6 @@
 # hadoop-pipeline
 
-A criação do framework [Hadoop](https://hadoop.apache.org/) mudou totalmente o paradigma dos modelos de armazenagem e processamento de dados. Com o artifício da computação paralela e distribuída, podemos processar grandes datasets em um tempo muito inferior em relação a outros players do mercado. 
+A criação do framework [Hadoop](https://hadoop.apache.org/) mudou totalmente o paradigma dos modelos de armazenagem e processamento de dados. Com o artifício da computação paralela e distribuída, podemos processar grandes datasets em um tempo muito inferior em relação a outros *players* do mercado. 
 
 O framework Hadoop é composto por várias ferramentas, nesse projeto, iremos utilizar o **HDFS**, **Map Reduce**, **Sqoop** e **Hive**.
 
