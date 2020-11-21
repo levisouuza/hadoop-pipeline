@@ -53,7 +53,7 @@ Iremos copiar os dados das tabelas do postgres para o HDFS. Para isso, iremos ex
 
 No processamento de carga para o HDFS, o sqoop utiliza o método de *MapReduce*, dito anteriormente. Em sua execução, ocorre o particionamente de registros da tabela em vários arquivos(o próprio sqoop define a quantidade de arquivos e registros contidos neles) baseado em sua chave primária, acarretando em um aumento de performance de carga. 
 
-Os arquivos são armazenados no diretório */user/cloudera/retail/*, visto que estamos utilizando a VM cloudera quickstart.
+Os arquivos são armazenados no diretório */user/cloudera/lake/retail/*, visto que estamos utilizando a VM cloudera quickstart.
 
 Agora que os dados estão em nosso **Data Lake**, o HDFS, será necessário levá-los para o nosso **Data Warehouse**. Um DW é um armazém de dados/banco de dados onde será inseridos os dados para serem analisados pelos analistas e cientistas de dado, analista de Business Intelligence ou quem desejar usá-los para gerar *insights* para o negócio.
 
@@ -69,3 +69,6 @@ Logo abaixo segue as etapas da crição de banco de dados e tabela.
 
 ![HiveQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/HiveQL.png)
 
+**Algumas observações: **
+
+* jfyffghg
