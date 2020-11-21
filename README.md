@@ -65,5 +65,7 @@ Nesse projeto, o intuito é mostrar como funciona, de maneira bem prática, algu
 
 O [Apache Hive](https://hive.apache.org/) é a ferramenta do ecossistema Hadoop de Data Warehouse. Com a linguagem HiveQL, é possível realizar analisar uma gigantesca massa de dados utilizando uma linguagem muito similar ao SQL (Conhecido pela maioria dos analistas de dados) atrelado ao método de processamento MapReduce. 
 
+Logo abaixo segue as etapas da crição de banco de dados e tabela. 
 
+![HiveQL](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/HiveQL.png)
 
