@@ -44,4 +44,13 @@ Vamos realizar uma consulta na tabela que iremos trabalhar, a retail.
 ![SqoopQuery](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopQuery.png)
 
 Output query sqoop:
+
 ![SqoopQueryOutput](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopQuery.jpeg)
+
+Iremos copiar os dados das tabelas do postgres para o HDFS. Para isso, iremos executar a linha de comando abaixo.
+
+![Sqoopimport](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopImport.png)
+
+No processamento de carga para o HDFS, o sqoop utiliza o método de *MapReduce*, dito anteriormente. Em sua execução, ocorre o particionamente de registros da tabela em vários arquivos(o próprio sqoop define a quantidade de arquivos e registros contidos neles) baseado em sua chave primária, acarretando em um aumento de performance de carga. 
+
+Os arquivos são armazenados no diretório */user/cloudera/retail/*, visto que estamos utilizando a VM cloudera quickstart.
