@@ -39,4 +39,9 @@ O resultado apresentado foi:
 
 ![SqoopOutputTable](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqooplistTables.jpeg)
 
+Vamos realizar uma consulta na tabela que iremos trabalhar, a retail. 
 
+![SqoopQuery](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopQuery.png)
+
+Output query sqoop:
+![SqoopQueryOutput](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/SqoopQuery.jpeg)
