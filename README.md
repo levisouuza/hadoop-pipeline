@@ -12,7 +12,7 @@ O [Sqoop](https://sqoop.apache.org/) é a ferramenta de extração e carga de da
 
 O [Apache Hive](https://hive.apache.org/) é o Data Warehouse do framework. Um Data Warehouse é o armazém de dados utilizados para análise das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando queries na linguagem HiveQL, uma linguagem similar SQL e MapReduce.
 
-Baseado nessas ferramentas, criei um pequeno pipeline de dados. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente pronto para desenvolvimento do Ecossistema Hadoop.
+Baseado nessas ferramentas, criei um pequeno pipeline de dados. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente com Ecossistema Hadoop instalado para estudo.
 
 ## Data Pipeline 
 
