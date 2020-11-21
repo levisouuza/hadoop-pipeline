@@ -10,7 +10,7 @@ O [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_design.htm), *Hadoop Distrib
 
 O [Sqoop](https://sqoop.apache.org/) é a ferramenta de extração e carga de dados para bancos relacionais do ecossistema. O Sqoop exporta dados dos SGBD's para o HDFS ou vice-versa. Com poucas linhas de código é possível realizar o processo de extração e carga. Além disso, em execução, é realizado o processamento de MapReduce, garantindo uma maior performance.
 
-O [Apache Hive](https://hive.apache.org/) é o Data Warehouse do framework. Um Data Warehouse é o armazém de dados utilizados para análise das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando queries na linguagem HiveQL, uma linguagem similar SQL e MapReduce.
+O [Apache Hive](https://hive.apache.org/) é o Data Warehouse do framework. Um Data Warehouse é o armazém de dados utilizados para análise das organizações. Com a engine do HIVE é possível analisar grandes datasets utilizando queries na linguagem HiveQL, similar SQL, e MapReduce.
 
 Baseado nessas ferramentas, criei um pequeno pipeline de dados. Utilizei o [Cloudera Quickstart Vm](https://docs.cloudera.com/documentation/enterprise/5-14-x/topics/cloudera_quickstart_vm.html) com VMware que nos oferece o ambiente com Ecossistema Hadoop instalado para estudo.
 
