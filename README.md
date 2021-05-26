@@ -16,7 +16,7 @@ Baseado nessas ferramentas, criei um pequeno pipeline de dados. Utilizei o [Clou
 
 ## Data Pipeline 
 
-O fluxo apresentado abaixo consiste em extrair dados do Postgresql via Sqoop, inserindo-os no HDFS e criando uma tabela no hive para serem analisados.
+O fluxo apresentado abaixo consiste em extrair dados do Postgresql via Sqoop, inserindo-os no HDFS e analisá-los via Hive.
 
 ![Data Pipeline](https://github.com/levisouuza/hadoop-pipeline/blob/master/HadoopFiles/hadoop-pipeline.PNG)
 
